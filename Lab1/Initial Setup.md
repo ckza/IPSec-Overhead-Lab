@@ -1,7 +1,10 @@
-Lab 1 - Initial Setup to get general connectivity.
-----------------------------------------------------------------------------------
+# Lab 1 - Initial Setup to get general connectivity.
 
-! ---R1---
+![image](https://user-images.githubusercontent.com/33652862/153342953-bedd455c-c2e7-4dcd-a613-195b89e4415d.png)
+
+
+## R1
+```
 en
 conf t
 hostname R1
@@ -35,9 +38,9 @@ no shut
 ip route 0.0.0.0 0.0.0.0 66.31.56.1
 end
 wr
-
-
-! ---R2---
+```
+## R2
+```
 en
 conf t
 hostname R2
@@ -71,9 +74,10 @@ no shut
 ip route 0.0.0.0 0.0.0.0 66.31.57.1
 end
 wr
+```
 
-
-! ---INTERNET---
+## INTERNET ROUTER
+```
 en
 conf t
 hostname Internet
@@ -91,43 +95,4 @@ ip route 10.1.1.0 255.255.255.0 66.31.56.2
 ip route 10.2.1.0 255.255.255.0 66.31.57.2
 end
 wr
-
-
-set pcname PC1_1_A
-ip dhcp
-wr
-
-set pcname PC1_2_A
-ip dhcp
-wr
-
-set pcname PC1_3_A
-ip dhcp
-wr
-
-set pcname PC2_1_A
-ip dhcp
-wr
-
-set pcname PC2_2_A
-ip dhcp
-wr
-
-set pcname PC2_3_A
-ip dhcp
-wr
-
-
-
-Lab 2 - Get packet captures (P2P Clean)
-----------------------------------------------------------------------------------
-! 
-! ---TEST1---
-! Ping from R1 to R2 and check packet size
-! TEST1 Result: 114 bytes / ICMP = 72
-!
-! ---TEST2---
-! Ping from PC1_1_A to PC2_1_A and check packet size
-! TEST2 Result: 98 bytes / ICMP = 56
-!
-! Question - why is ICMP 16 bytes bigger Router to Router?
+```
