@@ -7,6 +7,8 @@ This is R1 to R2 Crypto Map IPsec VPN applied on the interface.
 - There's no NAT on R1 or R2, but if there was you'd have to add Nat Excemption
 - There's also no inbound ACL. If there was you'd have to add the following to permit ISAKMP and ESP
 
+
+
 ```
 ip access-list extended inbound-R1
  permit tcp any any established
