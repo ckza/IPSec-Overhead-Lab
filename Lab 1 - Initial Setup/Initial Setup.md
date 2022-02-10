@@ -91,6 +91,7 @@ int g0/1
 ip address 66.31.57.1 255.255.255.252
 no shut
 ! Static Route for CMAP Lab 
+! Note you can ommit this - I did some end to end testing and added the static routes. 
 ip route 10.1.1.0 255.255.255.0 66.31.56.2
 ip route 10.2.1.0 255.255.255.0 66.31.57.2
 end
